@@ -555,3 +555,272 @@ body {
     font-size: 16px;
     line-height: 20px;
 }
+
+/* Responsive*/
+@media screen and (max-width: 900px) { /*El responsive funcionara hasta 900px si pasa ya no funciona*/
+    .mockup {
+        width: 400px;
+        height: auto;
+    }
+
+    .title {
+        font-size: 50px;
+    }
+
+    .copy {
+        font-size: 22px;
+    }
+
+    .cta {
+        padding: 15px 22px;
+    }
+
+    .container-cards {
+        justify-content: space-evenly; /* Tienen los elementos wrap , poniendo space-evelyn se dividen equitativamente */
+    }
+
+    .services .card{
+        width: 45%;
+    }
+
+    .background {
+        width: 52%;
+    }
+
+    .card{
+        width: 42%;
+    }
+
+    .testimony-container {
+        justify-content: space-evenly;
+    }
+
+    .testimony_card {
+        width: 45%;
+    }
+
+    .check_item {
+        width: 45%;
+        margin-bottom: 35px;
+    }
+
+    .newsletter {
+        width: 80%;
+    }
+
+    .download {
+        width: 100%;
+    }
+
+    .download_app {
+        justify-content: space-between;
+    }
+
+    .download_item {
+        width: 45%;
+    }
+
+    .get-email {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .socialmedia_icon {
+        font-size: 18px;
+    }
+
+    .socialmedia_legend {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 700px) { /*El responsive funcionara hasta 700px si pasa ya no funciona*/
+    main .container,
+    footer .container {
+        padding: 60px;
+    }
+
+    .nav_container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .nav_hero {
+        height: auto;
+    }
+
+    .logo {
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .links {
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    .link {
+        padding: 7px 10px;
+    }
+
+    .hero_main {
+        flex-direction: column-reverse; /*Se pone primero la imagen con este elemento*/
+        justify-content: flex-end ; /*Se posiciona al principio*/
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .hero_textos {
+        width: 100%;
+        text-align: center;
+    }
+
+    .mockup {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .title {
+        font-size: 35px;
+    }
+
+    .copy {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .copy_section {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .services .card {
+        width: 80%;
+    }
+
+    .container-bg {
+        justify-content: space-evenly;
+    }
+
+    .card {
+        margin-bottom: 40px;
+        width: 65%;
+    }
+
+    .card_title {
+        font-size: 35px;
+    }
+
+    .card_title_unique {
+        font-size: 35px;
+    }
+
+    .card_button {
+        width: 100%;
+    }
+
+    .background {
+        width: 65%;
+        margin-bottom: 40px;
+    }
+
+    .background_copy {
+        display: none;
+    }
+
+    .testimony_card {
+        width: 65%;
+
+    }
+
+    .testimony_name {
+        font-size: 20px;
+    }
+
+    .container--modifier {
+        width: 100%;
+    }
+
+    .item-contact {
+        width: 100%;
+    }
+
+    .newsletter {
+        width: 100%;
+    }
+
+    .gasoline_logo {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .mockup {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+
+    .services .card {
+        width: 95%;
+    }
+
+    .card {
+        width: 95%;
+    }
+
+    .background {
+        width: 95%;
+    }
+
+    .testimony_card {
+        width: 95%;
+    }
+
+    .testimony_history {
+        font-size: 20px;
+    }
+
+    .container--modifier {
+        width: 90%;
+    }
+
+    .newsletter {
+        width: 100%;
+        display: none;
+    }
+
+    .gasoline_logo {
+        width: 100%;
+    }
+
+    .newsletter--modifier {
+        display: block;
+    }
+
+    .check_item {
+        width: 100%;
+        border: none;
+        padding: none;
+        justify-content: center;
+    }
+
+    .download_item {
+        width: 50%;
+    }
+
+    .download_title {
+        font-size: 16px;
+    }
+
+    .download_logo {
+        font-size: 30px;
+    }
+
+    
+    
+}
