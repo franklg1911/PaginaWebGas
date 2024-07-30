@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
+/* Trabajar con la raiz del documento con los colores */
+:root {
+    --color1: #8a6a86;
+    --color2: #805065;
+    --gray: #ffffff80;
+    --gray2: #f7d9d990;
+    --color3: #9185a3;
+    --color4: #9ba0bb;
+    --shadow: 0 8px 8px;/*Añade efectos de sombra alrededor de un elemento*/
+    --color_shadow: #9185a3;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,4 +22,242 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+.container {  /*Aplica todo el contenedor */
+    width: 90%; /*Ocupe el 90% del ancho pantalla que no pase los 1200px */
+    max-width: 1200px; /*Ancho maximo */
+    margin: 0 auto; /*Arriba y abajo el margin es de 0 y luego auto hacia los lados*/
+    overflow: hidden; /*Si algo sale del contenedor no se vera */
+    padding: 100px 0; /*Padding de 100px arriba y hacia abajo y 0 hacia los lados */
+    height: auto;
+}
 
+.container--modifier {
+    width: 60%; /*Modifica el conteiner de la seccion 4 */
+}
+
+.hero { /*Esta clase se pone antes del conteiner para que no modifique el header */
+    width: 100%; /*Tamaño del ancho del header */
+    min-height: 100vh; /*No sobrepase el 100vh (vh equivale a ocupar el 100% de la altura visible de la pantalla) */
+    background: linear-gradient(180deg, #9ba0bb 0%, #805065 100%);
+
+}
+
+.nav_hero {
+    color: #fff;
+    height: 70px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*Alinear al principio del contenedor */
+    height: inherit; /*Tiene la misma altura que su elemento padre */
+    padding: 0;
+}
+
+.logo_name {
+    font-size: 24px;
+}
+
+.link {
+    display: inline-block; /*Se comportan como elementos en linea pero tiene tamaño y margen como si fueran elementos de bloque */
+    color: inherit;
+    text-decoration: none;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.link--active {
+    color: var(--color2);
+    font-weight: 800;
+}
+
+.point {
+    color: #fff
+}
+
+.hero_main {
+    height: calc(100vh - 70px); /*100vh del alto de la pantalla menos 70px que mide el NAV */
+    display: flex; /*Dispone elementos dentro un contenedor y proporciona distribución del espacio */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.mockup {
+    object-fit: cover; /*Nunca se pixelea la imagen */
+    width: 48%;
+    /* height: calc(100vh - 70px); 100vh del alto de la pantalla menos 70px que mide el NAV */
+    max-height: 90vh;
+}
+
+.title {
+    font-size: 56px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.title--active {
+    color: var(--color2);
+    font-weight: 700;
+}
+
+.copy {
+    font-size: 24px;
+    color: var(--gray);
+    text-shadow: var(--shadow) --color_shadow;
+    margin: 15px 5px; /*15px hacia arriba y abajo y 0 a los costados */
+}
+
+.copy_active {
+    font-weight: 900;
+}
+
+.cta {
+    padding: 20px 30px;
+    display: inline-block; /*Para no tener problema al usar margin y padding */
+    background: linear-gradient(180deg, #805065 10%, #8a6a86 100%);
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 8px;
+}
+
+/* Servicios */
+
+.services {
+    background: #fafafa;
+}
+
+.subtitle {
+    font-size: 42px;
+}
+
+.subtitle--modifier {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.copy_section {
+    color: var(--color2);
+    font-size: 22px;
+    line-height: 32px; /*Linea  vertical sea mas grande */
+    margin-bottom: 60px; /*Para separar del elemento de abajo*/
+
+}
+
+.copy_section--modifier {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.container-cards {
+    display: flex; /*Para que los elementos se pongan en la misma linea */
+    justify-content: space-between; /*Para que se pongan a las esquinas */
+    align-items: center;
+    flex-wrap: wrap; /*En el caso que no haya espacio se vaya hacia abajo */
+}
+
+.card {
+    width: 30%;
+    padding: 30px 0;
+    overflow: hidden;
+    background: linear-gradient(180deg, #9ba0bb 0%, #805065 100%);
+    border-radius: 10px;
+    position: relative;
+    text-align: right;
+    margin-bottom: 60px;
+}
+
+.card_img{
+    text-align: left;
+    width: 95%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px; /*Redondea la esquina de la izquierda y la esquina izquierda inferior */
+}
+
+.cards_text {
+    text-align: left;
+    width: 90%;
+    margin-left: auto;
+    padding-right: 25px;
+}
+
+.card_list {
+    color: #fff;
+    font-weight: 700;
+    margin: 25px 0 12px; /*25px arriba, hacia la derecha 0 , y abajo 12px y el 4 elemento es 0 por defecto */
+    font-size: 18px;
+}
+
+.card_title{
+    font-size: 35px;
+    margin-bottom: 8px;
+    color: var(--color4);
+}
+
+.card_title_unique{
+    font-size: 35px;
+    margin-bottom: 8px;
+    color: var(--color2)
+}
+
+.card_copy {
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.card_button {
+    display: block;
+    background: linear-gradient(180deg, #9ba0bb 100%, #805065 0%);
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    width: 90%;
+    font-weight: 700;
+    text-align: center;
+    padding: 12px 0;
+}
+
+.card_date {
+    color: var(--color4);
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.container-bg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container-bg .card {
+    margin: 0px
+}
+
+.background {
+    width: 68%;
+    height: 290px;
+    border-radius: 10px;
+    position: relative; /*Posiciona los textos en la imagen */ 
+
+}
+
+.background_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.background_text {
+    position: absolute;
+    width: 100%;
+    bottom: 30px; /*Subir 30 px hacia arriba*/ 
+    left: 15px; /*Para la izquierda 15px*/ 
+    color: #fff;
+}
